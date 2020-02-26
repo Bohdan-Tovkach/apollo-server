@@ -1,4 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server')
+const { RESTDataSource } = require('apollo-datasource-rest')
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
@@ -38,8 +39,6 @@ const resolvers = {
 		},
   },
 }
-
-const { RESTDataSource } = require('apollo-datasource-rest');
 
 class apiFunc extends RESTDataSource {
   constructor() {
